@@ -1,0 +1,5 @@
+# Reconnaissance workspace (scraped source, screenshots, scratch scripts)
+_recon/
+
+# Brand imagery is loaded from the live CDN at runtime, not redistributed here.
+assets/img/

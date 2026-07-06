@@ -19,14 +19,17 @@
     </div>
   </div>
 
-  <!-- header -->
+  <!-- header (dark meteor bar) -->
   <header class="hdr" data-hdr>
+    <canvas class="hdr__sky" data-sky aria-hidden="true"></canvas>
+    <div class="hdr__glow" aria-hidden="true"></div>
     <button class="hdr__burger" aria-label="Open menu" data-open><span></span><span></span><span></span></button>
     <nav class="hdr__nav" aria-label="Primary">
       <ul class="nav">
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#lookbook">Lookbook</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#men">Men</a></li>
+        <li><a href="#women">Women</a></li>
+        <li><a href="#jackets">Jackets</a></li>
+        <li><a href="#hoodies">Hoodies</a></li>
       </ul>
     </nav>
     <h1 class="brand"><a href="#top" aria-label="HOLLOWLINE — home">Hollowline</a></h1>
@@ -49,9 +52,11 @@
     <div class="drawer__panel">
       <button class="drawer__close" aria-label="Close menu" data-close>&times;</button>
       <nav class="drawer__nav" aria-label="Mobile">
-        <a href="#shop" data-close>Shop</a>
-        <a href="#lookbook" data-close>Lookbook</a>
-        <a href="#about" data-close>About</a>
+        <a href="#men" data-close>Men</a>
+        <a href="#women" data-close>Women</a>
+        <a href="#jackets" data-close>Jackets</a>
+        <a href="#winterwear" data-close>Winterwear</a>
+        <a href="#hoodies" data-close>Hoodies</a>
         <a href="#account" data-close>Account</a>
       </nav>
     </div>
@@ -61,36 +66,70 @@
   <main id="main">
     <span id="top"></span>
 
-    <!-- hero -->
-    <section class="hero" id="shop">
-      <picture>
-        <source media="(max-width:749px)" srcset="img/hero_mobile.svg">
-        <img class="hero__media" src="img/hero_desktop.svg" alt="HOLLOWLINE debut collection" loading="eager">
-      </picture>
-      <div class="hero__overlay">
-        <p class="hero__label">Debut Collection</p>
-        <h2 class="hero__title">Hollowline</h2>
-        <p class="hero__sub">Concept-driven clothing, cut clean and made in limited runs.</p>
-        <a class="btn" href="#lookbook">Explore</a>
+    <!-- 1 · MEN (hero) -->
+    <section class="section section--hero" id="men">
+      <a class="section__link" href="#men" aria-label="Shop Men">
+        <img class="section__media" src="img/men.svg" alt="Men" loading="eager">
+        <div class="section__scrim"></div>
+      </a>
+      <div class="section__content">
+        <p class="section__label">Debut Collection</p>
+        <h2 class="section__title">Men</h2>
+        <a class="btn" href="#men">Shop Men</a>
       </div>
-      <div class="hero__scroll">Scroll</div>
+      <div class="section__scrolldown">Scroll</div>
     </section>
 
-    <!-- statement -->
-    <section class="statement reveal">
-      <p>Form in <span class="accent">shadow.</span> A first line of garments built on restraint, structure, and quiet detail.</p>
+    <!-- 2 · WOMEN -->
+    <section class="section reveal" id="women">
+      <a class="section__link" href="#women" aria-label="Shop Women">
+        <img class="section__media" src="img/women.svg" alt="Women" loading="lazy">
+        <div class="section__scrim"></div>
+      </a>
+      <div class="section__content">
+        <p class="section__label">Collection</p>
+        <h2 class="section__title">Women</h2>
+        <a class="btn" href="#women">Shop Women</a>
+      </div>
     </section>
 
-    <!-- feature split -->
-    <section class="split reveal" id="lookbook">
-      <a class="split__a" href="#shop">
-        <img src="img/feature_left.svg" alt="Form">
-        <div class="split__cap"><h3>Form</h3><span class="btn btn--dark">View</span></div>
+    <!-- 3 · JACKETS -->
+    <section class="section reveal" id="jackets">
+      <a class="section__link" href="#jackets" aria-label="Shop Jackets">
+        <img class="section__media" src="img/jackets.svg" alt="Jackets" loading="lazy">
+        <div class="section__scrim"></div>
       </a>
-      <a class="split__a" href="#shop">
-        <img src="img/feature_right.svg" alt="Shadow">
-        <div class="split__cap"><h3>Shadow</h3><span class="btn btn--dark">View</span></div>
+      <div class="section__content">
+        <p class="section__label">Outerwear</p>
+        <h2 class="section__title">Jackets</h2>
+        <a class="btn" href="#jackets">Shop Jackets</a>
+      </div>
+    </section>
+
+    <!-- 4 · WINTERWEAR -->
+    <section class="section reveal" id="winterwear">
+      <a class="section__link" href="#winterwear" aria-label="Shop Winterwear">
+        <img class="section__media" src="img/winterwear.svg" alt="Winterwear" loading="lazy">
+        <div class="section__scrim"></div>
       </a>
+      <div class="section__content">
+        <p class="section__label">Cold Weather</p>
+        <h2 class="section__title">Winterwear</h2>
+        <a class="btn" href="#winterwear">Shop Winterwear</a>
+      </div>
+    </section>
+
+    <!-- 5 · HOODIES -->
+    <section class="section reveal" id="hoodies">
+      <a class="section__link" href="#hoodies" aria-label="Shop Hoodies">
+        <img class="section__media" src="img/hoodies.svg" alt="Hoodies" loading="lazy">
+        <div class="section__scrim"></div>
+      </a>
+      <div class="section__content">
+        <p class="section__label">Fleece</p>
+        <h2 class="section__title">Hoodies</h2>
+        <a class="btn" href="#hoodies">Shop Hoodies</a>
+      </div>
     </section>
 
     <!-- newsletter -->
@@ -115,9 +154,11 @@
       <div class="ft__col">
         <h4>Shop</h4>
         <ul>
-          <li><a href="#shop">Debut Collection</a></li>
-          <li><a href="#lookbook">Lookbook</a></li>
-          <li><a href="#shop">New Arrivals</a></li>
+          <li><a href="#men">Men</a></li>
+          <li><a href="#women">Women</a></li>
+          <li><a href="#jackets">Jackets</a></li>
+          <li><a href="#winterwear">Winterwear</a></li>
+          <li><a href="#hoodies">Hoodies</a></li>
         </ul>
       </div>
       <div class="ft__col">
@@ -139,7 +180,7 @@
     </div>
     <div class="ft__bottom">
       <span>© 2026 Hollowline</span>
-      <span>Placeholder imagery — swap in /img before launch</span>
+      <span>Placeholder imagery — replace /img before launch</span>
     </div>
   </footer>
 

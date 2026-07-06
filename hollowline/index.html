@@ -26,6 +26,7 @@
     <button class="hdr__burger" aria-label="Open menu" data-open><span></span><span></span><span></span></button>
     <nav class="hdr__nav" aria-label="Primary">
       <ul class="nav">
+        <li><a href="#trends">Trends</a></li>
         <li><a href="#men">Men</a></li>
         <li><a href="#women">Women</a></li>
         <li><a href="#jackets">Jackets</a></li>
@@ -52,6 +53,7 @@
     <div class="drawer__panel">
       <button class="drawer__close" aria-label="Close menu" data-close>&times;</button>
       <nav class="drawer__nav" aria-label="Mobile">
+        <a href="#trends" data-close>Trends</a>
         <a href="#men" data-close>Men</a>
         <a href="#women" data-close>Women</a>
         <a href="#jackets" data-close>Jackets</a>
@@ -76,13 +78,27 @@
 
       <div class="grid">
 
-        <!-- 1 · MEN (hero) -->
-        <a class="card card--full card--hero card--light" id="men" href="#men" aria-label="Shop Men" style="--frame:#b6b6b7;--veil:rgba(182,182,183,.55)">
+        <!-- 1 · TRENDS (hero, video) -->
+        <a class="card card--full card--hero card--light" id="trends" href="#trends" aria-label="Explore Trends" style="--frame:#b6b6b7;--veil:rgba(182,182,183,.55)">
           <div class="card__frame">
-            <video class="card__img" src="img/Men-Section.mp4" poster="img/Men-Section.JPG" autoplay muted loop playsinline preload="metadata" aria-label="Men — distressed patchwork tee, worn"></video>
+            <video class="card__img" src="img/Men-Section.mp4" poster="img/Men-Section.JPG" autoplay muted loop playsinline preload="metadata" aria-label="Trends — worn in motion"></video>
             <div class="card__veil"></div>
             <span class="card__inset"></span>
-            <div class="card__top"><span>01</span><span>Menswear</span></div>
+            <div class="card__top"><span>01</span><span>Trending Now</span></div>
+            <div class="card__caption">
+              <h3 class="card__title">Trends</h3>
+              <span class="card__cta">Explore</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 2 · MEN (full) -->
+        <a class="card card--full reveal" id="men" href="#men" aria-label="Shop Men" style="--frame:#4d4d4e">
+          <div class="card__frame">
+            <img class="card__img" src="img/5b228898-cd86-4467-8ffb-751f58b763a6.jpeg" alt="Men — distressed patchwork tee" loading="lazy">
+            <div class="card__veil"></div>
+            <span class="card__inset"></span>
+            <div class="card__top"><span>02</span><span>Menswear</span></div>
             <div class="card__caption">
               <h3 class="card__title">Men</h3>
               <span class="card__cta">Shop Men</span>
@@ -90,13 +106,13 @@
           </div>
         </a>
 
-        <!-- 2 · WOMEN (full) -->
+        <!-- 3 · WOMEN (full) -->
         <a class="card card--full card--light reveal" id="women" href="#women" aria-label="Shop Women" style="--frame:#f1efeb">
           <div class="card__frame">
             <img class="card__img" src="img/b3b0f0cf-b153-4d1a-ae31-cdf245ed1844.jpeg" alt="Women — washed statue floral tee" loading="lazy">
             <div class="card__veil"></div>
             <span class="card__inset"></span>
-            <div class="card__top"><span>02</span><span>Womenswear</span></div>
+            <div class="card__top"><span>03</span><span>Womenswear</span></div>
             <div class="card__caption">
               <h3 class="card__title">Women</h3>
               <span class="card__cta">Shop Women</span>
@@ -110,7 +126,7 @@
             <img class="card__img" src="img/Jacket-section.jpg" alt="Jackets — worn on model" loading="lazy">
             <div class="card__veil"></div>
             <span class="card__inset"></span>
-            <div class="card__top"><span>03</span><span>Outerwear</span></div>
+            <div class="card__top"><span>04</span><span>Outerwear</span></div>
             <div class="card__caption">
               <h3 class="card__title">Jackets</h3>
               <span class="card__cta">Shop</span>
@@ -124,7 +140,7 @@
             <img class="card__img" src="img/22c98783-39d0-4833-80f9-35fc7d537463.jpeg" alt="Winterwear — smoke marble tee" loading="lazy">
             <div class="card__veil"></div>
             <span class="card__inset"></span>
-            <div class="card__top"><span>04</span><span>Cold Weather</span></div>
+            <div class="card__top"><span>05</span><span>Cold Weather</span></div>
             <div class="card__caption">
               <h3 class="card__title">Winterwear</h3>
               <span class="card__cta">Shop</span>
@@ -138,7 +154,7 @@
             <img class="card__img" src="img/af497ac7-f433-4e56-ae69-e231690f751e.jpeg" alt="Hoodies — washed canyon hoodie" loading="lazy">
             <div class="card__veil"></div>
             <span class="card__inset"></span>
-            <div class="card__top"><span>05</span><span>Fleece</span></div>
+            <div class="card__top"><span>06</span><span>Fleece</span></div>
             <div class="card__caption">
               <h3 class="card__title">Hoodies</h3>
               <span class="card__cta">Shop Hoodies</span>
@@ -171,6 +187,7 @@
       <div class="ft__col">
         <h4>Shop</h4>
         <ul>
+          <li><a href="#trends">Trends</a></li>
           <li><a href="#men">Men</a></li>
           <li><a href="#women">Women</a></li>
           <li><a href="#jackets">Jackets</a></li>

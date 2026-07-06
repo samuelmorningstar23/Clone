@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOLLOWLINE</title>
+  <meta name="description" content="HOLLOWLINE — concept-driven clothing. Debut collection.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- announcement -->
+  <div class="ann" data-ann>
+    <div class="ann__track" aria-live="polite">
+      <p class="ann__item on">Free shipping on the debut drop</p>
+      <p class="ann__item">Sign up for early access</p>
+      <p class="ann__item">Made in limited runs</p>
+    </div>
+  </div>
+
+  <!-- header -->
+  <header class="hdr" data-hdr>
+    <button class="hdr__burger" aria-label="Open menu" data-open><span></span><span></span><span></span></button>
+    <nav class="hdr__nav" aria-label="Primary">
+      <ul class="nav">
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#lookbook">Lookbook</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <h1 class="brand"><a href="#top" aria-label="HOLLOWLINE — home">Hollowline</a></h1>
+    <div class="hdr__icons">
+      <button class="icon" aria-label="Search" data-search>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+      </button>
+      <a class="icon icon--account" href="#account" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+      </a>
+      <button class="icon" aria-label="Cart" data-cart>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- mobile drawer -->
+  <div class="drawer" data-drawer hidden>
+    <div class="drawer__panel">
+      <button class="drawer__close" aria-label="Close menu" data-close>&times;</button>
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a href="#shop" data-close>Shop</a>
+        <a href="#lookbook" data-close>Lookbook</a>
+        <a href="#about" data-close>About</a>
+        <a href="#account" data-close>Account</a>
+      </nav>
+    </div>
+    <div class="drawer__scrim" data-close></div>
+  </div>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- hero -->
+    <section class="hero" id="shop">
+      <picture>
+        <source media="(max-width:749px)" srcset="img/hero_mobile.svg">
+        <img class="hero__media" src="img/hero_desktop.svg" alt="HOLLOWLINE debut collection" loading="eager">
+      </picture>
+      <div class="hero__overlay">
+        <p class="hero__label">Debut Collection</p>
+        <h2 class="hero__title">Hollowline</h2>
+        <p class="hero__sub">Concept-driven clothing, cut clean and made in limited runs.</p>
+        <a class="btn" href="#lookbook">Explore</a>
+      </div>
+      <div class="hero__scroll">Scroll</div>
+    </section>
+
+    <!-- statement -->
+    <section class="statement reveal">
+      <p>Form in <span class="accent">shadow.</span> A first line of garments built on restraint, structure, and quiet detail.</p>
+    </section>
+
+    <!-- feature split -->
+    <section class="split reveal" id="lookbook">
+      <a class="split__a" href="#shop">
+        <img src="img/feature_left.svg" alt="Form">
+        <div class="split__cap"><h3>Form</h3><span class="btn btn--dark">View</span></div>
+      </a>
+      <a class="split__a" href="#shop">
+        <img src="img/feature_right.svg" alt="Shadow">
+        <div class="split__cap"><h3>Shadow</h3><span class="btn btn--dark">View</span></div>
+      </a>
+    </section>
+
+    <!-- newsletter -->
+    <section class="news reveal" id="about">
+      <h2>Join the first drop</h2>
+      <p>Be first to the debut collection. No noise — just early access and release dates.</p>
+      <form class="news__form" data-news>
+        <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+        <button type="submit">Notify me</button>
+      </form>
+      <p class="news__msg" data-news-msg role="status"></p>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="ft">
+    <div class="ft__top">
+      <div class="ft__brand">
+        <h3>Hollowline</h3>
+        <p>Concept-driven clothing, cut clean and made in limited runs.</p>
+      </div>
+      <div class="ft__col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop">Debut Collection</a></li>
+          <li><a href="#lookbook">Lookbook</a></li>
+          <li><a href="#shop">New Arrivals</a></li>
+        </ul>
+      </div>
+      <div class="ft__col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#about">Shipping &amp; Returns</a></li>
+          <li><a href="#about">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ft__col">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#" rel="noopener">Instagram</a></li>
+          <li><a href="#" rel="noopener">TikTok</a></li>
+          <li><a href="#" rel="noopener">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft__bottom">
+      <span>© 2026 Hollowline</span>
+      <span>Placeholder imagery — swap in /img before launch</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

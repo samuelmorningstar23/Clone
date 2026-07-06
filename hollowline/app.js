@@ -173,4 +173,86 @@
     }, { threshold: 0.12 });
     reveals.forEach(function (el) { io.observe(el); });
   } else { reveals.forEach(function (el) { el.classList.add("in"); }); }
+
+  /* ---------------- motion engine: deck stack + parallax + tilt ---------------- */
+  (function motion() {
+    if (reduce) return;
+    var deck = document.querySelector("[data-deck]");
+    if (!deck) return;
+    var items = [].slice.call(deck.querySelectorAll(".deck__item"));
+    var cards = [].slice.call(deck.querySelectorAll(".card"));
+    var isPhone = window.matchMedia("(max-width: 749px)");
+    var fine = window.matchMedia("(pointer: fine)").matches;
+
+    // per-card tilt state
+    var tilt = new Map();
+    cards.forEach(function (c) { tilt.set(c, { rx: 0, ry: 0, tx: 0, ty: 0 }); });
+    if (fine) {
+      cards.forEach(function (c) {
+        c.addEventListener("mousemove", function (e) {
+          var r = c.getBoundingClientRect();
+          var t = tilt.get(c);
+          t.ty = ((e.clientX - r.left) / r.width - 0.5) * 5;   // rotateY
+          t.tx = -((e.clientY - r.top) / r.height - 0.5) * 3.5; // rotateX
+        });
+        c.addEventListener("mouseleave", function () {
+          var t = tilt.get(c); t.tx = 0; t.ty = 0;
+        });
+      });
+    }
+
+    var stickTop = 0;
+    function measure() {
+      var cs = getComputedStyle(document.documentElement);
+      stickTop = parseFloat(cs.getPropertyValue("--header-h")) + 14 || 100;
+    }
+    measure();
+    window.addEventListener("resize", measure);
+
+    function frame() {
+      if (!isPhone.matches) {
+        var vh = window.innerHeight;
+        items.forEach(function (item, i) {
+          // stack progress: how far the NEXT sibling has risen over this one
+          var p = 0;
+          var next = items[i + 1];
+          if (next) {
+            var nr = next.getBoundingClientRect();
+            p = (vh - nr.top) / (vh - stickTop);
+            p = Math.max(0, Math.min(1, p));
+          }
+          // parallax within the plate
+          var r = item.getBoundingClientRect();
+          var mid = (r.top + r.height / 2 - vh / 2) / vh; // -0.5..0.5
+          var drift = Math.max(-1, Math.min(1, mid)) * -26;
+
+          [].slice.call(item.querySelectorAll(".card")).forEach(function (c) {
+            var t = tilt.get(c);
+            t.rx += (t.tx - t.rx) * 0.08;
+            t.ry += (t.ty - t.ry) * 0.08;
+            var s = 1 - 0.055 * p;
+            c.style.transform = "scale(" + s.toFixed(4) + ") rotateX(" + t.rx.toFixed(2) + "deg) rotateY(" + t.ry.toFixed(2) + "deg)";
+            c.style.filter = p > 0.01 ? "brightness(" + (1 - 0.32 * p).toFixed(3) + ")" : "";
+            var img = c.querySelector(".card__img");
+            if (img) img.style.transform = "scale(1.06) translate3d(0," + drift.toFixed(1) + "px,0)";
+          });
+        });
+      } else {
+        // phones: clear inline transforms, keep light parallax
+        var vh2 = window.innerHeight;
+        items.forEach(function (item) {
+          var r = item.getBoundingClientRect();
+          var mid = (r.top + r.height / 2 - vh2 / 2) / vh2;
+          var drift = Math.max(-1, Math.min(1, mid)) * -14;
+          [].slice.call(item.querySelectorAll(".card")).forEach(function (c) {
+            c.style.transform = ""; c.style.filter = "";
+            var img = c.querySelector(".card__img");
+            if (img) img.style.transform = "scale(1.06) translate3d(0," + drift.toFixed(1) + "px,0)";
+          });
+        });
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
 })();

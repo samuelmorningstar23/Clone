@@ -9,6 +9,7 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
 
   <!-- announcement -->
   <div class="ann" data-ann>
@@ -76,92 +77,114 @@
         </div>
       </div>
 
-      <div class="grid">
+      <div class="deck" data-deck>
 
-        <!-- 1 · TRENDS (hero, video) -->
-        <a class="card card--full card--hero card--light" id="trends" href="#trends" aria-label="Explore Trends" style="--frame:#b6b6b7;--veil:rgba(182,182,183,.55)">
-          <div class="card__frame">
-            <video class="card__img" src="img/Men-Section.mp4" poster="img/Men-Section.JPG" autoplay muted loop playsinline preload="metadata" aria-label="Trends — worn in motion"></video>
-            <div class="card__veil"></div>
-            <span class="card__inset"></span>
-            <div class="card__top"><span>01</span><span>Trending Now</span></div>
-            <div class="card__caption">
-              <h3 class="card__title">Trends</h3>
-              <span class="card__cta">Explore</span>
+        <!-- 01 · TRENDS (hero, video) -->
+        <div class="deck__item">
+          <a class="card card--hero card--light" id="trends" href="#trends" aria-label="Explore Trends" style="--frame:#b6b6b7;--veil:rgba(182,182,183,.55)">
+            <div class="card__frame">
+              <video class="card__img" src="img/Men-Section.mp4" poster="img/Men-Section.JPG" autoplay muted loop playsinline preload="metadata" aria-label="Trends — worn in motion"></video>
+              <div class="card__veil"></div>
+              <span class="card__ghost">01</span>
+              <span class="card__inset"></span>
+              <div class="card__top"><span>trending now</span></div>
+              <div class="card__caption">
+                <h3 class="card__title">Trends</h3>
+                <span class="card__cta">explore</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <!-- 2 · MEN (full) -->
-        <a class="card card--full reveal" id="men" href="#men" aria-label="Shop Men" style="--frame:#4d4d4e">
-          <div class="card__frame">
-            <img class="card__img" src="img/5b228898-cd86-4467-8ffb-751f58b763a6.jpeg" alt="Men — distressed patchwork tee" loading="lazy">
-            <div class="card__veil"></div>
-            <span class="card__inset"></span>
-            <div class="card__top"><span>02</span><span>Menswear</span></div>
-            <div class="card__caption">
-              <h3 class="card__title">Men</h3>
-              <span class="card__cta">Shop Men</span>
+        <!-- 02 · MEN -->
+        <div class="deck__item">
+          <a class="card" id="men" href="#men" aria-label="Shop Men" style="--frame:#4d4d4e">
+            <div class="card__frame">
+              <img class="card__img" src="img/5b228898-cd86-4467-8ffb-751f58b763a6.jpeg" alt="Men — distressed patchwork tee" loading="lazy">
+              <div class="card__veil"></div>
+              <span class="card__ghost">02</span>
+              <span class="card__inset"></span>
+              <div class="card__top"><span>menswear</span></div>
+              <div class="card__caption">
+                <h3 class="card__title">Men</h3>
+                <span class="card__cta">shop men</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <!-- 3 · WOMEN (full) -->
-        <a class="card card--full card--light reveal" id="women" href="#women" aria-label="Shop Women" style="--frame:#f1efeb">
-          <div class="card__frame">
-            <img class="card__img" src="img/b3b0f0cf-b153-4d1a-ae31-cdf245ed1844.jpeg" alt="Women — washed statue floral tee" loading="lazy">
-            <div class="card__veil"></div>
-            <span class="card__inset"></span>
-            <div class="card__top"><span>03</span><span>Womenswear</span></div>
-            <div class="card__caption">
-              <h3 class="card__title">Women</h3>
-              <span class="card__cta">Shop Women</span>
+        <!-- 03 · WOMEN -->
+        <div class="deck__item">
+          <a class="card card--light" id="women" href="#women" aria-label="Shop Women" style="--frame:#f1efeb">
+            <div class="card__frame">
+              <img class="card__img" src="img/b3b0f0cf-b153-4d1a-ae31-cdf245ed1844.jpeg" alt="Women — washed statue floral tee" loading="lazy">
+              <div class="card__veil"></div>
+              <span class="card__ghost">03</span>
+              <span class="card__inset"></span>
+              <div class="card__top"><span>womenswear</span></div>
+              <div class="card__caption">
+                <h3 class="card__title">Women</h3>
+                <span class="card__cta">shop women</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <!-- 3 · JACKETS (half — middle pair) -->
-        <a class="card card--half card--light reveal" id="jackets" href="#jackets" aria-label="Shop Jackets" style="--frame:#f3f3f3;--veil:rgba(243,243,243,.55)">
-          <div class="card__frame">
-            <img class="card__img" src="img/Jacket-section.jpg" alt="Jackets — worn on model" loading="lazy">
-            <div class="card__veil"></div>
-            <span class="card__inset"></span>
-            <div class="card__top"><span>04</span><span>Outerwear</span></div>
-            <div class="card__caption">
-              <h3 class="card__title">Jackets</h3>
-              <span class="card__cta">Shop</span>
+        <!-- 04/05 · JACKETS + WINTERWEAR (pair) -->
+        <div class="deck__item deck__item--pair">
+          <a class="card card--half card--light" id="jackets" href="#jackets" aria-label="Shop Jackets" style="--frame:#f3f3f3;--veil:rgba(243,243,243,.55)">
+            <div class="card__frame">
+              <img class="card__img" src="img/Jacket-section.jpg" alt="Jackets — worn on model" loading="lazy">
+              <div class="card__veil"></div>
+              <span class="card__ghost">04</span>
+              <span class="card__inset"></span>
+              <div class="card__top"><span>outerwear</span></div>
+              <div class="card__caption">
+                <h3 class="card__title">Jackets</h3>
+                <span class="card__cta">shop</span>
+              </div>
             </div>
-          </div>
-        </a>
-
-        <!-- 4 · WINTERWEAR (half — middle pair) -->
-        <a class="card card--half reveal" id="winterwear" href="#winterwear" aria-label="Shop Winterwear" style="--frame:#777675">
-          <div class="card__frame">
-            <img class="card__img" src="img/22c98783-39d0-4833-80f9-35fc7d537463.jpeg" alt="Winterwear — smoke marble tee" loading="lazy">
-            <div class="card__veil"></div>
-            <span class="card__inset"></span>
-            <div class="card__top"><span>05</span><span>Cold Weather</span></div>
-            <div class="card__caption">
-              <h3 class="card__title">Winterwear</h3>
-              <span class="card__cta">Shop</span>
+          </a>
+          <a class="card card--half" id="winterwear" href="#winterwear" aria-label="Shop Winterwear" style="--frame:#777675">
+            <div class="card__frame">
+              <img class="card__img" src="img/22c98783-39d0-4833-80f9-35fc7d537463.jpeg" alt="Winterwear — smoke marble tee" loading="lazy">
+              <div class="card__veil"></div>
+              <span class="card__ghost">05</span>
+              <span class="card__inset"></span>
+              <div class="card__top"><span>cold weather</span></div>
+              <div class="card__caption">
+                <h3 class="card__title">Winterwear</h3>
+                <span class="card__cta">shop</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <!-- 5 · HOODIES (full) -->
-        <a class="card card--full reveal" id="hoodies" href="#hoodies" aria-label="Shop Hoodies" style="--frame:#6c6b69">
-          <div class="card__frame">
-            <img class="card__img" src="img/af497ac7-f433-4e56-ae69-e231690f751e.jpeg" alt="Hoodies — washed canyon hoodie" loading="lazy">
-            <div class="card__veil"></div>
-            <span class="card__inset"></span>
-            <div class="card__top"><span>06</span><span>Fleece</span></div>
-            <div class="card__caption">
-              <h3 class="card__title">Hoodies</h3>
-              <span class="card__cta">Shop Hoodies</span>
+        <!-- 06 · HOODIES -->
+        <div class="deck__item">
+          <a class="card" id="hoodies" href="#hoodies" aria-label="Shop Hoodies" style="--frame:#6c6b69">
+            <div class="card__frame">
+              <img class="card__img" src="img/af497ac7-f433-4e56-ae69-e231690f751e.jpeg" alt="Hoodies — washed canyon hoodie" loading="lazy">
+              <div class="card__veil"></div>
+              <span class="card__ghost">06</span>
+              <span class="card__inset"></span>
+              <div class="card__top"><span>fleece</span></div>
+              <div class="card__caption">
+                <h3 class="card__title">Hoodies</h3>
+                <span class="card__cta">shop hoodies</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
+      </div>
+
+      <!-- brand ticker -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>no outline — no limits — just hollow lines — between what was and what will never be — built from inside out — </span>
+          <span>no outline — no limits — just hollow lines — between what was and what will never be — built from inside out — </span>
+        </div>
       </div>
     </div>
   </main>

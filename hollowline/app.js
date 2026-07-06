@@ -150,6 +150,21 @@
     });
   }
 
+  /* ---------------- card videos: iOS autoplay + pause off-screen ---------------- */
+  var vids = document.querySelectorAll("video.card__img");
+  vids.forEach(function (v) {
+    v.muted = true; // required for autoplay on iOS even with the attribute
+    var tryPlay = function () { var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+    tryPlay();
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) tryPlay(); else v.pause();
+        });
+      }, { threshold: 0.1 }).observe(v);
+    }
+  });
+
   /* ---------------- reveal on scroll ---------------- */
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {

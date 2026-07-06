@@ -63,86 +63,87 @@
     <div class="drawer__scrim" data-close></div>
   </div>
 
-  <main id="main">
+  <main id="main" class="shop">
     <span id="top"></span>
+    <div class="shop__inner">
 
-    <!-- 1 · MEN (hero) -->
-    <section class="section section--hero" id="men">
-      <a class="section__link" href="#men" aria-label="Shop Men">
-        <img class="section__media" src="img/men.svg" alt="Men" loading="eager">
-        <div class="section__scrim"></div>
-      </a>
-      <div class="section__content">
-        <p class="section__label">Debut Collection</p>
-        <h2 class="section__title">Men</h2>
-        <a class="btn" href="#men">Shop Men</a>
+      <div class="shop__intro">
+        <p class="eyebrow">Debut Collection</p>
+        <h2>The First Line</h2>
       </div>
-      <div class="section__scrolldown">Scroll</div>
-    </section>
 
-    <!-- 2 · WOMEN -->
-    <section class="section reveal" id="women">
-      <a class="section__link" href="#women" aria-label="Shop Women">
-        <img class="section__media" src="img/women.svg" alt="Women" loading="lazy">
-        <div class="section__scrim"></div>
-      </a>
-      <div class="section__content">
-        <p class="section__label">Collection</p>
-        <h2 class="section__title">Women</h2>
-        <a class="btn" href="#women">Shop Women</a>
+      <div class="grid">
+
+        <!-- 1 · MEN (hero) -->
+        <a class="card card--full card--hero" id="men" href="#men" aria-label="Shop Men">
+          <div class="card__frame">
+            <span class="card__tag">Debut Collection</span>
+            <img class="card__img" src="img/5b228898-cd86-4467-8ffb-751f58b763a6.jpeg" alt="Men — distressed patchwork tee" loading="eager">
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="card__index">01 — Menswear</span><h3 class="card__title">Men</h3></div>
+            <span class="card__cta">Shop Men</span>
+          </div>
+        </a>
+
+        <!-- 2 · WOMEN (full) -->
+        <a class="card card--full reveal" id="women" href="#women" aria-label="Shop Women">
+          <div class="card__frame">
+            <img class="card__img" src="img/b3b0f0cf-b153-4d1a-ae31-cdf245ed1844.jpeg" alt="Women — washed statue floral tee" loading="lazy">
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="card__index">02 — Womenswear</span><h3 class="card__title">Women</h3></div>
+            <span class="card__cta">Shop Women</span>
+          </div>
+        </a>
+
+        <!-- 3 · JACKETS (half — middle pair) -->
+        <a class="card card--half reveal" id="jackets" href="#jackets" aria-label="Shop Jackets">
+          <div class="card__frame">
+            <img class="card__img" src="img/c8c3e63e-acf2-4b96-b8b6-af4306076eee.jpeg" alt="Jackets — floral sherpa denim jacket" loading="lazy">
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="card__index">03 — Outerwear</span><h3 class="card__title">Jackets</h3></div>
+            <span class="card__cta">Shop</span>
+          </div>
+        </a>
+
+        <!-- 4 · WINTERWEAR (half — middle pair) -->
+        <a class="card card--half reveal" id="winterwear" href="#winterwear" aria-label="Shop Winterwear">
+          <div class="card__frame">
+            <img class="card__img" src="img/22c98783-39d0-4833-80f9-35fc7d537463.jpeg" alt="Winterwear — smoke marble tee" loading="lazy">
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="card__index">04 — Cold Weather</span><h3 class="card__title">Winterwear</h3></div>
+            <span class="card__cta">Shop</span>
+          </div>
+        </a>
+
+        <!-- 5 · HOODIES (full) -->
+        <a class="card card--full reveal" id="hoodies" href="#hoodies" aria-label="Shop Hoodies">
+          <div class="card__frame">
+            <img class="card__img" src="img/af497ac7-f433-4e56-ae69-e231690f751e.jpeg" alt="Hoodies — washed canyon hoodie" loading="lazy">
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="card__index">05 — Fleece</span><h3 class="card__title">Hoodies</h3></div>
+            <span class="card__cta">Shop Hoodies</span>
+          </div>
+        </a>
+
       </div>
-    </section>
-
-    <!-- 3 · JACKETS -->
-    <section class="section reveal" id="jackets">
-      <a class="section__link" href="#jackets" aria-label="Shop Jackets">
-        <img class="section__media" src="img/jackets.svg" alt="Jackets" loading="lazy">
-        <div class="section__scrim"></div>
-      </a>
-      <div class="section__content">
-        <p class="section__label">Outerwear</p>
-        <h2 class="section__title">Jackets</h2>
-        <a class="btn" href="#jackets">Shop Jackets</a>
-      </div>
-    </section>
-
-    <!-- 4 · WINTERWEAR -->
-    <section class="section reveal" id="winterwear">
-      <a class="section__link" href="#winterwear" aria-label="Shop Winterwear">
-        <img class="section__media" src="img/winterwear.svg" alt="Winterwear" loading="lazy">
-        <div class="section__scrim"></div>
-      </a>
-      <div class="section__content">
-        <p class="section__label">Cold Weather</p>
-        <h2 class="section__title">Winterwear</h2>
-        <a class="btn" href="#winterwear">Shop Winterwear</a>
-      </div>
-    </section>
-
-    <!-- 5 · HOODIES -->
-    <section class="section reveal" id="hoodies">
-      <a class="section__link" href="#hoodies" aria-label="Shop Hoodies">
-        <img class="section__media" src="img/hoodies.svg" alt="Hoodies" loading="lazy">
-        <div class="section__scrim"></div>
-      </a>
-      <div class="section__content">
-        <p class="section__label">Fleece</p>
-        <h2 class="section__title">Hoodies</h2>
-        <a class="btn" href="#hoodies">Shop Hoodies</a>
-      </div>
-    </section>
-
-    <!-- newsletter -->
-    <section class="news reveal" id="about">
-      <h2>Join the first drop</h2>
-      <p>Be first to the debut collection. No noise — just early access and release dates.</p>
-      <form class="news__form" data-news>
-        <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
-        <button type="submit">Notify me</button>
-      </form>
-      <p class="news__msg" data-news-msg role="status"></p>
-    </section>
+    </div>
   </main>
+
+  <!-- newsletter -->
+  <section class="news reveal" id="about">
+    <h2>Join the first drop</h2>
+    <p>Be first to the debut collection. No noise — just early access and release dates.</p>
+    <form class="news__form" data-news>
+      <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+      <button type="submit">Notify me</button>
+    </form>
+    <p class="news__msg" data-news-msg role="status"></p>
+  </section>
 
   <!-- footer -->
   <footer class="ft">
@@ -180,7 +181,7 @@
     </div>
     <div class="ft__bottom">
       <span>© 2026 Hollowline</span>
-      <span>Placeholder imagery — replace /img before launch</span>
+      <span>Debut collection — made in limited runs</span>
     </div>
   </footer>
 
